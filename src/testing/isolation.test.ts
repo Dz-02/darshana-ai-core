@@ -12,7 +12,7 @@ import {
   type AppAdapter,
   type AppContext,
   type ChatEngine,
-} from '@ai-core/contracts';
+} from '../index';
 import { runAdapterContract, runChatEngineContract } from './index';
 
 function fakeAdapter(appId: string, overrides: Partial<AppAdapter> = {}): AppAdapter {

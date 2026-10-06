@@ -7,9 +7,17 @@
  */
 import type { AppContext } from './adapter';
 
+/** One earlier turn, for engines that are handed the transcript rather than keeping it. */
+export interface ChatTurn {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
 export interface ChatRequest {
   message: string;
   conversationId?: string;
+  /** Earlier turns, oldest first, excluding `message`. Engines that keep their own history ignore it. */
+  history?: ReadonlyArray<ChatTurn>;
   module?: string;
   route?: string;
   /** Page context the UI wants the engine to see. Opaque to the contract. */
@@ -31,6 +39,8 @@ export interface ChatAnswer {
   suggestions?: ReadonlyArray<string>;
   /** Engine-defined rich blocks (tables, cards). The UI ignores kinds it does not know. */
   blocks?: ReadonlyArray<{ kind: string; data: unknown }>;
+  /** Engine-defined diagnostics (status, tools used). Passed through; the core never interprets it. */
+  meta?: Readonly<Record<string, unknown>>;
 }
 
 export interface ChatReply {

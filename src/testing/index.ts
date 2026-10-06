@@ -18,7 +18,7 @@ import {
   type AppContext,
   type ChatEngine,
   type ContextInput,
-} from '@ai-core/contracts';
+} from '../index';
 
 export interface AdapterContractOptions {
   create: () => AppAdapter | Promise<AppAdapter>;

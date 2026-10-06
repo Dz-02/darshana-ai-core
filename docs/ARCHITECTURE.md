@@ -18,9 +18,9 @@ session store. It calls the `AppAdapter` interface (`getContext`, `resolveEntity
 
 | Area | Status |
 |---|---|
-| Adapter, ChatEngine, response contracts, isolation guard | done (`@ai-core/contracts`) |
+| Adapter, ChatEngine, response contracts, isolation guard | done (`darshana-ai-core`) |
 | Agent data-model types (byte-identical in both apps today) | done |
-| Contract + isolation test suites | done (`@ai-core/contract-tests`) |
+| Contract + isolation test suites | done (`darshana-ai-core/testing`) |
 | Common AI types, model config/resolution client, policy client, usage/audit contracts | planned |
 | Shared clients/hooks, navigation/action contracts | planned |
 | Chat UI, AI Stack UI, AI & Intelligence UI | planned (after adapters exist) |
