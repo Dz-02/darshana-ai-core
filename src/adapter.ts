@@ -9,7 +9,7 @@
  */
 
 /** Bumped on a breaking change to any contract in this package. Adapters declare the one they implement. */
-export const CORE_CONTRACT_VERSION = '1.0.0';
+export const CORE_CONTRACT_VERSION = '1.1.0';
 
 /** What the host application hands the adapter so it can work out who is calling. Opaque to the core. */
 export interface ContextInput {

@@ -1,6 +1,6 @@
 {
   "name": "darshana-ai-core",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Universal AI core: application-agnostic contracts, isolation guard and contract suites. Applications connect through their own adapters.",
   "private": true,
   "type": "module",
