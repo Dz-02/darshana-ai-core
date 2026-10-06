@@ -1,0 +1,15 @@
+{
+  "name": "ai-core",
+  "private": true,
+  "description": "Universal AI core: application-agnostic contracts and shared AI functionality. Applications connect through adapters.",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "test": "node --import tsx --test \"packages/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
